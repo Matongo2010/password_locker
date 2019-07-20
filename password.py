@@ -1,0 +1,3 @@
+class sign-up:
+
+    pass
