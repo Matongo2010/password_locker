@@ -34,4 +34,14 @@ if __name__ == '__main__':
 
 
 
-    def test_save_contact(self):
+    def test_save_member(self):
+        '''
+        test_save_member test case to test if the member object is saved into
+         the member list
+        '''
+
+        self.new_member.save_member() # saving the new contact
+        self.assertEqual(len(Member.member_list),1)
+
+if __name__ ==  '__main__':
+    unittest.main()
