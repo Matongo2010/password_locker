@@ -1,10 +1,10 @@
 import unittest
-from sign-up import members
+from members import Members
 
-class TestContact(unittest.TestCase):
+class TestMembers(unittest.TestCase):
 
   '''
-    Test class that defines test cases for the sign-up class behaviours.
+    Test class that defines test cases for the members class behaviours.
 
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
@@ -15,3 +15,19 @@ class TestContact(unittest.TestCase):
          '''
         Set up method to run before each test cases.
         '''
+
+        self.new_member = Members("Joseph","Karanja","0745345678", "JosepK", "jose@ms.com") # create member object
+
+        def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
+
+        self.assertEqual(self.new_member.first_name,"Joseph")
+        self.assertEqual(self.new_member.last_name,"Karanja")
+        self.assertEqual(self.new_member.phone_number,"0712345678")
+        self.assertEqual(self.new_member.username,"JosepK")
+        self.assertEqual(self.new_member.email,"jose@ms.com")
+
+if __name__ == '__main__':
+    unittest.main()
