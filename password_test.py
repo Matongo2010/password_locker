@@ -1,26 +1,26 @@
-import unittest
-from members import Members
+import unittest # Importing the unittest module
+from password import Member # Importing the members class
 
-class TestMembers(unittest.TestCase):
+
+class TestMember(unittest.TestCase):
 
   '''
     Test class that defines test cases for the members class behaviours.
 
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
-    '''
-
-    def setUp(self):
+  '''
+def setUp(self):
 
          '''
         Set up method to run before each test cases.
         '''
 
-        self.new_member = Members("Joseph","Karanja","0745345678", "JosepK", "jose@ms.com") # create member object
+         self.new_member = Member("Joseph","Karanja","0745345678", "JosepK", "jose@ms.com") # create member object
 
-        def test_init(self):
+def test_init(self):
         '''
-        test_init test case to test if the object is initialized properly
+    test_init test case to test if the object is initialized properly
         '''
 
         self.assertEqual(self.new_member.first_name,"Joseph")
@@ -31,3 +31,7 @@ class TestMembers(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+
+    def test_save_contact(self):
