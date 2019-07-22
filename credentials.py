@@ -38,18 +38,29 @@ class Credentials:
         '''
         search for accounts
         '''
-        for credential in cls.credential_list:
+        for credential in cls.credentials_list:
             if credential.account == account:
                 return credential
 
         #confirm credentials#
 
         @classmethod
-        def cred_exists(cls, account):
+        def credentials_exists(cls, account):
         '''
         confirm a class actually exists
         '''
-        for credential in cls.credential_list:
+        for credential in cls.credentials_list:
             if credential.account == account:
                 return True
-        return False        
+        return False   
+
+        #Display credentials#
+
+        @classmethod
+        def display_credentials(cls):
+        '''
+        method that returns all credentials
+        '''
+        return cls.credentials_list
+
+    ##########copy passwoed############     
