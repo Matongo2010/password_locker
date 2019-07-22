@@ -38,6 +38,18 @@ class Credentials:
         '''
         search for accounts
         '''
-        for cred in cls.cred_list:
-            if cred.account == account:
-                return cred    
+        for credential in cls.credential_list:
+            if credential.account == account:
+                return credential
+
+        #confirm credentials#
+
+        @classmethod
+        def cred_exists(cls, account):
+        '''
+        confirm a class actually exists
+        '''
+        for credential in cls.credential_list:
+            if credential.account == account:
+                return True
+        return False        
