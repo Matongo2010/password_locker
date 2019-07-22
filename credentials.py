@@ -7,10 +7,18 @@ class Credentials:
 
     credentials_list = []
 
-    #assign property to credential list#
+        #assign property to credential list#
 
     def __init__(self, account , email , passlock):
     
         self.account = account
         self.email = email
         self.password = password
+
+        #save credentials#
+
+        def save_credentials(self):
+        '''
+        self credentials in cred_list
+        '''
+        Credentials.credentials_list.append(self)
