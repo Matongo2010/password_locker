@@ -9,7 +9,7 @@ class User:
     # Init method up here
 
 
-    def __init__ (self,username, password, email):
+    def __init__ (self,username, password):
 
         '''
         __init__ method that helps us define properties for our objects.
@@ -18,7 +18,6 @@ class User:
     
     self.username = username
     self.password = password
-    self.email = email
 
         #save multiple#
 

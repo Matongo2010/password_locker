@@ -11,7 +11,7 @@ def setUp(self):
         Set up method to run before each test cases.
         '''
 
-         self.new_user = User("Dre" , "matongome" , "justineadriano@gmail.com") # create user object
+         self.new_user = User("Dre" , "matongome") # create user object
 
          def tearDown(self):
         '''
@@ -31,7 +31,7 @@ def test_init(self):
         
         self.assertEqual(self.new_user.username,"Dre")
         self.assertEqual(self.new_user.password,"matongome")
-        self.assertEqual(self.new_user.email,"justineadriano@gmail.com")
+        
 
 
         def test_save_user(self):
