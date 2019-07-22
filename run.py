@@ -41,7 +41,7 @@ def create_credentials(account, email, password):
 
 def save_cred(cred):
     '''
-    save credentials
+    saving credentials
     '''
     cred.save_cred()
 
@@ -177,6 +177,7 @@ def main():
 
         else:
             print("Invalid, please  use these short codes : ca - create a new account, da - display accounts, fa -find an account, de- delete account , gp - generate a random password , ex -logout")
+
 if __name__ == '__main__':
     main()
 
