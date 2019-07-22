@@ -25,3 +25,12 @@ def find_user(username):
     method for find user using username
     '''
     return User.find_user(username)
+
+     # create credentials#
+     
+def create_credentials(account, email, password):
+    '''
+    method credentials details
+    '''
+    new_credential = Credentials(account, email, password)
+    return new_credential
