@@ -51,3 +51,12 @@ def display_credential():
     '''
     return Credentials.display_credential()
 
+    #search credentials#
+
+def find_account(account):
+    '''
+    method to search for an account
+    '''
+    return Credentials.find_account(account)
+
+
