@@ -1,15 +1,15 @@
-import pyperclip
+
 class Credentials:
 
     '''
     class that creates instaces of user accounts
     '''
 
-    credentials_list = []
+    cred_list = []
 
         #assign property to credential list#
 
-    def __init__(self, account , email , passlock):
+    def __init__(self, account , email , password):
     
         self.account = account
         self.email = email
@@ -17,56 +17,52 @@ class Credentials:
 
         #save credentials#
 
-        def save_credentials(self):
-        '''
-        self credentials in cred_list
-        '''
-        Credentials.credentials_list.append(self)
+        def save_cred(self):
+        
+            Credentials.cred_list.append(self)
 
         #Delete credentials#
 
-        def delete_credentials(self):
-        '''
-        delete credentials 
-        '''
-        Credentials.credentials_list.remove(self)
+        def delete_cred(self):
+         
+            Credentials.cred_list.remove(self)
 
         #search for credentials#
 
         @classmethod
         def find_account(cls, account):
-        '''
-        search for accounts
-        '''
-        for credential in cls.credentials_list:
-            if credential.account == account:
-                return credential
+            '''
+            search for accounts
+            '''
+            for cred in cls.cred_list:
+                if cred.account == account:
+                    return cred
 
         #confirm credentials#
 
         @classmethod
-        def credentials_exists(cls, account):
-        '''
-        confirm a class actually exists
-        '''
-        for credential in cls.credentials_list:
-            if credential.account == account:
-                return True
-        return False   
+        def cred_exists(cls, account):
+            '''
+            confirm a class actually exists
+            '''
+            for cred in cls.cred_list:
+                if cred.account == account:
+                    return True
+            return False   
 
         #Display credentials#
 
         @classmethod
-        def display_credentials(cls):
-        '''
-        method that returns all credentials
-        '''
-        return cls.credentials_list
+        def display_cred(cls):
+            '''
+            method that returns all credentials
+            '''
+            return cls.cred_list
 
         #copy password#
 
 
         @classmethod
-        def copy_passlock(cls, password):
+        def copy_password(cls, password):
             find_account = Credentials.find_account(password)
-            pyperclip.copy(find_account.password)     
+                 
