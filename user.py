@@ -1,30 +1,46 @@
-class Member:
+class User:
 
     """
-    Class that generates new instances of members
+    Class that generates new instances of users
     """
 
-    member_list = [] # Empty contact list
+    user_list = [] # Empty user list
 
     # Init method up here
 
-    def save_member(self):
+
+    def __init__ (self,username, password, email):
 
         '''
-        save_member method saves member objects into member_list
-        '''
-
-        Member.member_list.append(self)
-
-
-    def __init__ (self, first_name, last_name, phone_number, username, email)
-
-    '''
         __init__ method that helps us define properties for our objects.
-    '''
+        '''
 
-    self.first_name = first_name
-    self.last_name = last_name
-    self.phone_number = number
+    
     self.username = username
+    self.password = password
     self.email = email
+
+        #save multiple#
+
+    def save_user(self):
+        User.user_list.append(self)
+
+        #delete user#
+
+    def delete_user(self):
+
+        '''
+        delete a user account
+        '''
+        User.user_list.remove(self)
+
+        #find user#
+
+        @classmethod
+        def find_user(cls, username):
+            '''
+            find username using search terms
+            '''
+            for user in cls.user_list:
+                if user.username == username:
+                    return  user
