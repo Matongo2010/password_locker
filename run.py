@@ -42,3 +42,12 @@ def save_credential(credential):
     save credentials
     '''
     credential.save_credential()
+
+    #dispaly credential#
+
+def display_credential():
+    '''
+    method to display all the saved credentials
+    '''
+    return Credentials.display_credential()
+
